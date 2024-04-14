@@ -9,10 +9,11 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-    origin: "https://www.valenlaraeart.com"
-})
-);
+app.use(cors(
+    {
+        origin: "//localhost:3000"
+    }
+));
 
 const PORT = process.env.PORT;
 
@@ -28,8 +29,10 @@ app.use("/", imagesRouter);
 
 app.listen(PORT, () => console.log(`Backend application running on port ${PORT}`));
 
-mongoose.connect(process.env.mongoDBURL,
-    {useNewUrlParser: true},
-    () => {
-        console.log('MongoDB connected')
-    });
+mongoose.connect(process.env.mongoDBURL)
+    .then(() => {
+        console.log("Connected to MongoDB")
+    })
+    .catch((err) => {
+        console.log(err)
+    })

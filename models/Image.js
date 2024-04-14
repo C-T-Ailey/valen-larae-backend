@@ -12,14 +12,18 @@ const imageSchema = mongoose.Schema({
         required: true
     },
 
+    category: {
+        type: String,
+        required: true
+    },
+
     orientation: {
         type: String,
         required: true
     },
 
     dimensions: {
-        type: String,
-        required: true,
+        type: String
     },
 
     url: {
