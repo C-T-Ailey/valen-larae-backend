@@ -10,9 +10,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors(
-    {
-        origin: "//localhost:3000"
-    }
+    // {
+    //     origin: "//localhost:3000"
+    // }
 ));
 
 const PORT = process.env.PORT;
