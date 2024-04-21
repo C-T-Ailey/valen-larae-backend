@@ -43,6 +43,17 @@ exports.image_one_get = (req, res) => {
     })
 }
 
+exports.image_category_get = (req, res) => {
+    Image.find({"category": req.query.cat})
+    .then(images => {
+        res.json({images})
+    })
+    .catch((err) => {
+        console.log(err)
+        res.send("no bueno")
+    })
+}
+
 // UPDATE
 
 exports.image_edit_get = (req, res) => {

@@ -14,6 +14,7 @@ router.post("/images/add", isLoggedIn, imageCtrl.image_create);
 
 router.get("/images/all", imageCtrl.images_all_get);
 router.get("/images/detail", imageCtrl.image_one_get);
+router.get("/images/category", imageCtrl.image_category_get);
 
 // UPDATE
 
