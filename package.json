@@ -2,10 +2,10 @@
   "name": "vl_backend",
   "version": "1.0.0",
   "description": "Express backend app for Valen LaRae Art",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon server",
-    "start": "node server.js"
+    "test": "nodemon index",
+    "start": "node index.js"
   },
   "keywords": [
     "valen",
